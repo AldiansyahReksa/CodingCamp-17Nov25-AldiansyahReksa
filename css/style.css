@@ -1,0 +1,137 @@
+/* backgorund */
+body {
+    background: #f3f4f6;
+    font-family: 'Inter', sans-serif;
+    color: #374151;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* header */
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 28px;
+    background: #1e293b;
+    color: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+/* Logo */
+.logo-icon {
+    height: 60px;
+    width: 80px;
+    background-image: url('https://github.com/AldiansyahReksa/CodingCamp-17Nov25-AldiansyahReksa/blob/main/Screenshot%202025-11-21%20211540.png?raw=true');
+    background-size: cover;
+    border-radius: 6px;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    gap: 12px;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 8px 14px;
+    background: #e5e7eb;
+    color: #1e293b;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: 0.2s;
+    font-weight: 500;
+}
+
+nav a:hover {
+    background: #cbd5e1;
+}
+
+/* Responsive NAV */
+@media (max-width: 1280px) {
+    nav {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    nav a {
+        padding: 2px 0px;
+        font-size: 13px;
+    }
+}
+
+/* Section */
+section {
+    background: #ffffff;
+    padding: clamp(20px, 4vw, 40px);
+    border-radius: 14px;
+    max-width: 1440px;
+    margin: 32px auto;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+
+/* image*/
+img {
+    border-radius: 10px;
+    width: 100%;
+    transition: 0.2s;
+}
+
+img:hover {
+    transform: scale(1.02);
+}
+
+/* Form */
+#messageForm textarea {
+    background: #f9fafb;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #d1d5db;
+    width: 100%;
+    font-size: 15px;
+    margin-top: 6px;
+}
+
+#messageForm button {
+    background: #2563eb;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.25s;
+}
+
+#messageForm button:hover {
+    background: #1d4ed8;
+}
+
+/* Output Form */
+#message-me-page .bg-gray-50 {
+    background: #f9fafb !important;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px;
+    font-size: 15px;
+}
+
+/* Footer */
+footer {
+    background: #1e293b;
+    padding: 22px 0;
+    text-align: right;
+    color: #e5e7eb;
+    margin-top: 40px;
+    font-size: 14px;
+
+}
+
+/* Line */
+hr {
+    border-color: #000000;
+}
