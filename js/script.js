@@ -21,43 +21,58 @@ function welcomeMessage() {
         if (index < message.length) {
             element.innerText += message.charAt(index);
             index++;
-            setTimeout(typeWriter, 80); // Speed of typing (80ms per character)
+            setTimeout(typeWriter, 80); // Speed of typing
         }
     }
     
     typeWriter();
 }
 
-/// Function to validate the message form (to be implemented)
-function validateForm() {
+/// Fade-in animation for logo
+function fadeInLogo() {
+    const logo = document.getElementById("company-logo");
+    if (!logo) return; // prevent error if not found
 
+    let opacity = 0;
+
+    function fade() {
+        if (opacity < 1) {
+            opacity += 0.02;
+            logo.style.opacity = opacity;
+            requestAnimationFrame(fade);
+        }
+    }
+
+    fade();
 }
 
-/// Call the welcome message when page loads
-welcomeMessage();
-
-/// Handle form submission
+/// Handle form submission + call animations
 document.addEventListener("DOMContentLoaded", () => {
+
+    // Call animations AFTER DOM is fully loaded
+    welcomeMessage();
+    fadeInLogo();
+
     const form = document.getElementById("messageForm");
 
     form.addEventListener("submit", function(event) {
         event.preventDefault();
 
         const name = document.getElementById("name").value.trim();
-        const email = document.getElementById("email").value.trim();
-        const number = document.getElementById("number").value.trim();
+        const birth = document.getElementById("birthdate").value;
+        const gender = document.querySelector("input[name='gender']:checked")?.value;
         const message = document.getElementById("message").value.trim();
 
         // Validation
-        if (!name || !email || !number || !message) {
+        if (!name || !birth || !gender || !message) {
             alert("Semua data wajib diisi!");
             return;
         }
 
         // Show output
         document.getElementById("outputName").textContent = name;
-        document.getElementById("outputEmail").textContent = email;
-        document.getElementById("outputNumber").textContent = number || "N/A";
+        document.getElementById("outputBirth").textContent = birth;
+        document.getElementById("outputGender").textContent = gender;   
         document.getElementById("outputMessage").textContent = message;
     });
 });
