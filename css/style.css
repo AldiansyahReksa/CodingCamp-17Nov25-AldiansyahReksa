@@ -1,4 +1,4 @@
-/* ===== GLOBAL ===== */
+/* backgorund */
 body {
     background: #f3f4f6;
     font-family: 'Inter', sans-serif;
@@ -8,7 +8,7 @@ body {
     line-height: 1.6;
 }
 
-/* ===== HEADER ===== */
+/* header */
 .main-header {
     display: flex;
     align-items: center;
@@ -21,6 +21,7 @@ body {
     z-index: 50;
 }
 
+/* Logo */
 .logo-icon {
     height: 60px;
     width: 80px;
@@ -29,7 +30,7 @@ body {
     border-radius: 6px;
 }
 
-/* ===== NAVIGATION ===== */
+/* Navigation */
 nav {
     display: flex;
     gap: 12px;
@@ -62,18 +63,18 @@ nav a:hover {
     }
 }
 
-/* ===== SECTION ===== */
+/* Section */
 section {
     background: #ffffff;
     padding: clamp(20px, 4vw, 40px);
     border-radius: 14px;
-    max-width: 1280px;
+    max-width: 1440px;
     margin: 32px auto;
     box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 
 
-/* ===== IMAGES ===== */
+/* image*/
 img {
     border-radius: 10px;
     width: 100%;
@@ -84,7 +85,7 @@ img:hover {
     transform: scale(1.02);
 }
 
-/* ===== FORM ===== */
+/* Form */
 #messageForm textarea {
     background: #f9fafb;
     padding: 12px;
@@ -110,7 +111,7 @@ img:hover {
     background: #1d4ed8;
 }
 
-/* ===== OUTPUT BOX ===== */
+/* Output Form */
 #message-me-page .bg-gray-50 {
     background: #f9fafb !important;
     border: 1px solid #e2e8f0;
@@ -119,7 +120,7 @@ img:hover {
     font-size: 15px;
 }
 
-/* ===== FOOTER ===== */
+/* Footer */
 footer {
     background: #1e293b;
     padding: 22px 0;
@@ -130,6 +131,7 @@ footer {
 
 }
 
+/* Line */
 hr {
     border-color: #000000;
 }
